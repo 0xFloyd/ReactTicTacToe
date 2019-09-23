@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import logo from './logo.svg';
 import './index.css';
 
 function Square(props) {
@@ -98,7 +99,7 @@ class Game extends React.Component {
 
             return (
                 <li key={move}>
-                    <button onClick={() => this.jumpTo(move)}>{desc}</button>   {/* description of whis button move history */}
+                    <button className="step-button" onClick={() => this.jumpTo(move)}>{desc}</button>   {/* description of whis button move history */}
                 </li>
             );
         });
@@ -111,16 +112,28 @@ class Game extends React.Component {
         }
 
         return (
-            <div className="game">
-                <div className="game-board">
-                    <Board 
-                        squares = {current.squares}
-                        onClick={i => this.handleClick(i)}
-                    />
+            <div>
+                <div className="App">
+                    <div className="App-header">
+                        <img src={logo} className="App-logo" alt="logo" />
+                    </div>
                 </div>
-                <div className="game-info">
-                    <div>{status}</div>
-                    <ol>{moves}</ol>
+                <div className="game-container">
+                    <div className="game">
+                        <div className="game-board">
+                            <Board 
+                                squares = {current.squares}
+                                onClick={i => this.handleClick(i)}
+                            />
+                        </div>
+                        <div className="game-info">
+                            <div className="current-status">{status}</div>
+                            <ol>{moves}</ol>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a className="floyd-header" href="https://github.com/MrRyanFloyd/ReactTicTacToe">Ryan Floyd</a>
                 </div>
             </div>
         );

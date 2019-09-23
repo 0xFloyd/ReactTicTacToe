@@ -1,10 +1,15 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  font: 20px "Roboto", sans-serif;
+  margin: 0px;
+  color:rgb(40, 44, 52);
+
+  
 }
 
 ol, ul {
-  padding-left: 30px;
+  padding: 0px;
+  text-align: center;
+  list-style-type: none;
 }
 
 .board-row:after {
@@ -13,23 +18,26 @@ ol, ul {
   display: table;
 }
 
-.status {
-  margin-bottom: 10px;
+.current-status {
+  margin-top: 10px;
+  margin-bottom: -10px
 }
 
 .square {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 80px;
   margin-right: -1px;
   margin-top: -1px;
-  padding: 0;
+  padding: 0px;
   text-align: center;
-  width: 34px;
+  width: 80px;
+  color: rgb(40, 44, 52);
+
 }
 
 .square:focus {
@@ -40,11 +48,90 @@ ol, ul {
   background: #ddd;
 }
 
-.game {
+
+.game-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-row {
+  margin: auto;
+  
+}
+
+.game {
+  display: block;
   flex-direction: row;
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-left: 0px;
+  text-align: center;
+}
+
+.game-board {
+  padding: 10px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 100px;
+  margin-top: 25px;
+}
+
+.App-header {
+  /*background-color: #222;*/
+  height: 100px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.floyd-header {
+  position: absolute;
+  top: 0px;
+  background-color: rgb(40, 44, 52);
+  color: #61DBFB;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.floyd-header:hover {
+  position: absolute;
+  top: 0px;
+  background-color: rgb(40, 44, 52);
+  color: rgb(177, 233, 247);
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.step-button {
+  background-color: white;
+  -webkit-border-radius: 5;  
+  -moz-border-radius: 5;  
+  border-radius: 3px;
+  border: 1px solid rgb(212, 212, 212);
+  padding: 6px 12px 6px 12px;
+  margin: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  color: rgb(40, 44, 52)
 }
